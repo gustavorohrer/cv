@@ -1,0 +1,30 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lot
+*.lof
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# latexmk output dir
+/out/
+
+# macOS
+.DS_Store
+
+# IDE / editors
+.idea/
+*.iml
+.vscode/
+*.code-workspace
