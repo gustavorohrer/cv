@@ -1,4 +1,4 @@
-### LaTeX CV — Minimal Starter
+### LaTeX CV 
 
 A minimal, one‑page CV template built with LaTeX (XeLaTeX). Produces a clean PDF with tight spacing and a small footer showing the last update date.
 
