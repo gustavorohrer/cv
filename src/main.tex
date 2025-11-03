@@ -1,0 +1,125 @@
+% CV in LaTeX — Gustavo Rohrer
+% Engine: XeLaTeX (MacTeX)
+\documentclass[10pt,a4paper]{article}
+
+% Typography & layout
+\usepackage[a4paper,top=0.45in,bottom=0.6in,left=0.5in,right=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+% Pull the title block up a bit
+\setlength{\droptitle}{-1.2em}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{datetime2}
+\usepackage{xcolor}
+
+% Fonts (prefer Georgia on macOS, fallback to TeX Gyre Pagella)
+\newif\ifgeorgia
+\IfFontExistsTF{Georgia}{\georgiatrue}{\georgiafalse}
+\ifgeorgia
+  \setmainfont{Georgia}
+\else
+  \setmainfont{TeX Gyre Pagella}
+\fi
+
+% Section style — small caps, rule underneath
+\titleformat{\section}{\large\bfseries}{}{0pt}{\MakeUppercase}[
+  \vspace{0.2em}\titlerule]
+\titlespacing*{\section}{0pt}{0.45em}{0.2em}
+
+% Reduce space between items and paragraphs
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1em,labelsep=0.35em,itemsep=0.16em,topsep=0.12em,parsep=0pt,partopsep=0pt}
+
+% Colors
+\definecolor{muted}{gray}{0.3}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+% Header (title block)
+\pretitle{\begin{center}\LARGE\bfseries}
+\posttitle{\par\end{center}\vspace{-1.4em}}
+\preauthor{\begin{center}\normalsize}
+\postauthor{\par\end{center}\vspace{-0.8em}}
+
+% Footer with last updated date
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\footnotesize Last updated: \DTMtoday}
+\cfoot{\footnotesize Gustavo Rohrer}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Ensure the same footer also appears on pages using the 'plain' style (e.g., title page)
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \lfoot{\footnotesize Last updated: \DTMtoday}
+  \cfoot{\footnotesize Gustavo Rohrer}
+  \rfoot{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Helper: two-column row with flexible left and right
+\newcommand{\tworow}[2]{\noindent\begin{tabularx}{\textwidth}{@{}X r@{}}#1 & #2\\\end{tabularx}}
+
+% Helper: role/company/date/location header
+\newcommand{\roleentry}[4]{%
+  % #1 Title, #2 Company, #3 Right column (e.g., Remote), #4 Dates
+  \textbf{#1} \hfill {\small #3}\\[-0.2em]
+  {\itshape #2} \hfill {\small #4}\\[-0.35em]
+}
+
+\begin{document}
+
+% ---------- Title ----------
+\title{Gustavo Rohrer}
+\author{Argentina — Remote-first}
+\date{\vspace{-1.1em}\small \href{https://www.linkedin.com/in/gustavo-rohrer-89b00443}{LinkedIn} \;|\; \href{https://github.com/gustavorohrer}{GitHub} \;|\; \href{mailto:gustavorohrer@gmail.com}{gustavorohrer@gmail.com}}
+\maketitle
+
+% ---------- About Me ----------
+\section*{About Me}
+Full-stack engineer with more than 15 years of experience building reliable, scalable software. Recent focus on backend development with Go (3+ years) and frontend work with React (10+ years). Known for a structured, analytical approach and a focus on quality, reliability, and continuous improvement.
+
+% ---------- Experience ----------
+\section*{Experience}
+
+\roleentry{Full-stack Engineer}{Epwery}{Remote}{2022\textendash{}2025}
+\begin{itemize}
+  \item Designed and implemented Go backend services integrated with Salesforce and Stripe.
+  \item Built an idempotent Stripe webhook reconciliation worker, reducing payment mismatches and improving collection accuracy.
+  \item Developed automated email notification workflows, improving reliability and user engagement.
+  \item Increased test coverage on critical modules, reducing post-release bugs by up to 50\%.
+  \item Optimized CI pipelines with selective tests, saving 5\textendash{}15 minutes per PR and improving delivery speed.
+  \item Contributed to React components (including portals) and performed daily cross-team code reviews.
+\end{itemize}
+
+\vspace{0.3em}
+\roleentry{Full-stack Engineer \textemdash{} Prior roles}{Various companies}{Remote \& On-site}{2015\textendash{}2022}
+\begin{itemize}
+  \item Delivered production features in Java, Angular, and Node.js, focusing on maintainability and performance.
+  \item Participated in sprint planning and code reviews, and coordinated tasks in Agile teams.
+  \item DropCar: Migrated a monolithic architecture to microservices and integrated Twilio for masked communications.
+  \item COVID\textendash{}19 project: Led frontend development, acting as Scrum Master and improving UX under tight deadlines.
+  \item Synegen: Designed badge assignment logic for an e-learning platform (backend + UI).
+\end{itemize}
+
+% ---------- Skills ----------
+\section*{Skills}
+Go, React, JavaScript, TypeScript (basic), Java, Node.js, Python (basic), REST APIs, GraphQL (basic), PostgreSQL/SQL, AWS, Docker, CI/CD, Testing (mocks/coverage), Microservices, Observability \& Logging.
+
+% ---------- Education ----------
+\section*{Education}
+\tworow{\textbf{Universidad Nacional de La Plata, Argentina}}{\textit{Completed}}\\[-0.2em]
+\textit{Bachelor's degree in Information Systems}
+
+\end{document}
