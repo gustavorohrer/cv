@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1762199083.81295 "out/main.xdv" "out/main.pdf" "out/main" 1762199084.07691 0
-  "out/main.xdv" 1762199083.78556 22484 07fd06a69da91cfa8ca0294767267e14 "xelatex"
+["xdvipdfmx"] 1762251061.7238 "out/main.xdv" "out/main.pdf" "out/main" 1762251062.00609 0
+  "out/main.xdv" 1762251061.69604 20780 69c694f714d51a449b6f4814fdab5476 "xelatex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["xelatex"] 1762199083.23518 "src/main.tex" "out/main.xdv" "main" 1762199084.07623 0
+["xelatex"] 1762251061.10748 "src/main.tex" "out/main.xdv" "main" 1762251062.00532 0
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -67,9 +67,9 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1762182694 5639819 c6e5e898558fbbdf23194bfe124eade8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "out/main.aux" 1762199083.78497 128 852fc3e86949e4a73cd552c13992dc37 "xelatex"
-  "out/main.out" 1762199083.76956 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "src/main.tex" 1762197970.94644 4974 2e71ce4ad413b501ed74fbe070a57ef7 ""
+  "out/main.aux" 1762251061.69539 128 852fc3e86949e4a73cd552c13992dc37 "xelatex"
+  "out/main.out" 1762251061.68053 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "src/main.tex" 1762251051.94731 4801 320b94e84feffaa800513067f4f5a42c ""
   (generated)
   "out/main.aux"
   "out/main.log"
