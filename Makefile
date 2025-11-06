@@ -2,7 +2,7 @@
 
 MAIN=src/main.tex
 OUT=out
-PDF=$(OUT)/main.pdf
+PDF=$(OUT)/Gustavo_Rohrer_CV.pdf
 
 .PHONY: all build watch clean open
 
