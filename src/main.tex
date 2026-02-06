@@ -82,54 +82,60 @@
 
 % ---------- Title ----------
 \title{Gustavo Rohrer}
-\author{Argentina — Remote-first}
+\author{Argentina (UTC-3) · Remote-first}
 \date{\vspace{-1.1em}\small \href{https://www.linkedin.com/in/gustavo-rohrer-89b00443}{LinkedIn} \;|\; \href{mailto:gustavorohrer@gmail.com}{gustavorohrer@gmail.com}}
 \maketitle
 
 % ---------- About Me ----------
 \section*{About Me}
-Full-stack Engineer with over 10 years of experience. Expert in building scalable systems with Go (3+ years) and React/Next.js (7+ years), with a recent focus on Effect-TS for type-safe, functional backend architectures.
+Full-stack Engineer (10+ years) specializing in Go, React/Next.js, PostgreSQL. Built and operated production systems end-to-end: payments/subscriptions, event/webhook processing, onboarding UX, CI improvements, and incident remediation.
+Comfortable working in English with distributed teams.
 
 % ---------- Experience ----------
 \section*{Experience}
 
 \roleentry{Product Engineer}{ELYS Health}{Remote}{2026\textendash{}2026}
 \begin{itemize}
-  \item Subscription and Payment Infrastructure: Architected a comprehensive subscription system using Stripe, managing the full lifecycle from Checkout to Webhook handling; ensured consistent membership state through an event-driven architecture and oRPC transport.
-  \item Onboarding UX Redesign: Re-engineered the onboarding flow by migrating from modal-based state to Next.js named routes, enabling native browser history support (Back/Forward) and robust state persistence, which streamlined the user registration experience and simplified maintenance.
-  \item Critical Incident Remediation: Led the resolution of a high-priority Clerk webhook infinite loop, automating the cleanup of 120k+ corrupted records and implementing regression tests that stabilized the authentication layer.
-  \item Scalable User Growth System: Developed an automated waitlist and invitation system integrated with Resend, using atomic processing patterns to ensure data integrity and reliable lead management.
-  \item Architecture and Standards: Established core project guidelines and utility organization within a monorepo, adopting Effect-TS for type-safe functional programming, impacting the development workflow of a team of four engineers.
+  \item Built a Stripe subscription \& payment flow (Checkout + Webhooks), keeping membership state consistent via event-driven processing.
+  \item Refactored onboarding from modal state to Next.js route-based flow, enabling browser Back/Forward support and more reliable state persistence.
+  \item Resolved a critical production incident (Clerk webhook loop): automated cleanup of 120k+ corrupted records and added regression tests to prevent recurrence.
+  \item Implemented an automated waitlist + invite system integrated with Resend, using atomic processing patterns for reliable lead handling.
+  \item Contributed to codebase standards/utilities in a small engineering team, improving consistency and maintainability.
 \end{itemize}
 
 \vspace{0.3em}
 \roleentry{Full-stack Engineer}{Epwery}{Remote}{2022\textendash{}2025}
 \begin{itemize}
-  \item Designed and implemented Go backend services integrated with Salesforce and Stripe.
+  \item Designed and shipped Go backend services integrated with Salesforce and Stripe.
   \item Built an idempotent Stripe webhook reconciliation worker, reducing payment mismatches and improving collection accuracy.
-  \item Developed automated email notification workflows, improving reliability and user engagement.
-  \item Increased test coverage on critical modules, reducing post-release bugs by up to 50\%.
-  \item Optimized CI pipelines with selective tests, saving 5\textendash{}15 minutes per PR and improving delivery speed.
-  \item Contributed to React components (including portals) and performed daily cross-team code reviews.
+  \item Enhanced system reliability by implementing automated, fault-tolerant email notification workflows.
+  \item Increased test coverage for critical modules, reducing post-release bugs by up to 50\%.
+  \item Optimized CI with selective test execution, saving 5–15 minutes per PR and improving delivery speed.
+  \item Delivered React features/components and performed regular cross-team code reviews.
 \end{itemize}
 
 \vspace{0.3em}
 \roleentry{Full-stack Engineer \textemdash{} Prior roles}{Various companies}{Remote \& On-site}{2015\textendash{}2022}
 \begin{itemize}
-  \item Delivered production features in Java, Angular, and Node.js.
-  \item Participated in sprint planning and code reviews, and coordinated tasks across different teams.
-  \item DropCar: Migrated a monolithic architecture to microservices and integrated Twilio for masked communications.
-  \item COVID\textendash{}19 project: Led frontend development, acted as Scrum Master, and improved UX under tight deadlines.
-  \item Synegen: Designed badge assignment logic for an e-learning platform (backend and UI).
+  \item Shipped production features across Java, Angular, Node.js, and modern frontend stacks.
+  \item DropCar: migrated monolith toward microservices; integrated Twilio for masked communications.
+  \item City Government (COVID-19 Response): led frontend delivery and supported team execution under tight deadlines.
+  \item Synegen: designed and implemented badge assignment logic (backend + UI) for an e-learning platform.
 \end{itemize}
 
 % ---------- Skills ----------
 \section*{Skills}
-Go, React, Next.js, TypeScript, Effect-TS, Drizzle ORM, PostgreSQL, AWS, Java, Node.js, Python, oRPC, Stripe, Clerk, Resend, REST APIs, GraphQL, Docker, CI/CD, Testing (Vitest/mocks), Microservices, Observability and Logging.
+\begin{itemize}
+  \item Backend: Go, Node.js, REST/GraphQL, Webhooks/Event-driven, Idempotency, Background jobs/workers
+  \item Frontend: React, Next.js, TypeScript
+  \item Data: PostgreSQL, schema design, migrations
+  \item Infra/DevEx: Docker, CI/CD, testing, observability/logging
+  \item Integrations: Stripe, Salesforce, Clerk, Resend
+\end{itemize}
 
 % ---------- Education ----------
 \section*{Education}
-\tworow{\textbf{Universidad Nacional de La Plata, Argentina}}{\textit{Completed}}\\[-0.2em]
+\tworow{\textbf{Universidad Nacional de La Plata (Argentina)}}{\textit{Completed}}\\[-0.2em]
 \textit{Bachelor's degree in Information Systems}
 
 \end{document}
