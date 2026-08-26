@@ -31,9 +31,9 @@
 \titlespacing*{\section}{0pt}{0.45em}{0.2em}
 
 % Reduce space between items and paragraphs
-\setlength{\parskip}{0.35em}
+\setlength{\parskip}{0.3em}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=1em,labelsep=0.35em,itemsep=0.16em,topsep=0.12em,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=1em,labelsep=0.35em,itemsep=0.08em,topsep=0.08em,parsep=0pt,partopsep=0pt}
 
 % Colors
 \definecolor{muted}{gray}{0.3}
@@ -88,49 +88,54 @@
 
 % ---------- About Me ----------
 \section*{About Me}
-Full-stack Engineer (10+ years) specializing in Go, React/Next.js, PostgreSQL. Built and operated production systems end-to-end: payments/subscriptions, event/webhook processing, onboarding UX, CI improvements, and incident remediation.
+Full-stack Engineer (10+ years) in Go, React/Next.js, TypeScript, and PostgreSQL, focused on systems integration, automation, reliable async/event-driven workflows, and AI-assisted development. Built and operated production systems end-to-end: payments, webhooks, onboarding UX, CI, and incident remediation.
 
 % ---------- Experience ----------
 \section*{Experience}
 
-\roleentry{Product Engineer}{ELYS Health}{Remote}{2026\textendash{}2026}
+\roleentry{Full Stack Engineer}{EPWERY}{Remote}{Jun 2026\textendash{}Present}
 \begin{itemize}
-  \item Built a Stripe subscription \& payment flow (Checkout + Webhooks), keeping membership state consistent via event-driven processing.
-  \item Refactored onboarding from modal state to Next.js route-based flow, enabling browser Back/Forward support and more reliable state persistence.
+  \item Building backend (Go) and frontend (TypeScript) for an internal automation product: PostgreSQL schema/migrations, AWS S3-backed artifact storage, and third-party/legacy-system integrations.
+  \item Reverse-engineering external systems (auth flows, data contracts, failure modes) and writing lightweight specs before implementing durable, queue-based async workflows with idempotency and data-integrity checks.
+  \item Defining and applying an AI-assisted engineering workflow \textemdash{} repository discovery, lightweight technical specs, coding agents, focused validation, and diff review \textemdash{} while coordinating with another engineer and partner teams.
+\end{itemize}
+
+\vspace{0.12em}
+\roleentry{Product Engineer}{ELYS Health}{Remote}{Jan 2026}
+\begin{itemize}
+  \item Built a Stripe subscription \& payment flow (Checkout + Webhooks); refactored onboarding from modal state to a Next.js route-based flow for reliable Back/Forward support.
   \item Resolved a critical production incident (Clerk webhook loop): automated cleanup of 120k+ corrupted records and added regression tests to prevent recurrence.
-  \item Implemented an automated waitlist + invite system integrated with Resend, using atomic processing patterns for reliable lead handling.
-  \item Contributed to codebase standards/utilities in a small engineering team, improving consistency and maintainability.
+  \item Implemented an automated waitlist + invite system with Resend, using atomic processing patterns for reliable lead handling.
 \end{itemize}
 
-\vspace{0.3em}
-\roleentry{Full-stack Engineer}{Epwery - Ansel Health}{Remote}{2022\textendash{}2025}
+\vspace{0.12em}
+\roleentry{Full Stack Engineer}{Epwery - Ansel Health}{Remote}{Jul 2022\textendash{}Oct 2025}
 \begin{itemize}
-  \item Designed and shipped Go backend services integrated with Salesforce and Stripe.
-  \item Built an idempotent Stripe webhook reconciliation worker, reducing payment mismatches and improving collection accuracy.
-  \item Enhanced system reliability by implementing automated, fault-tolerant email notification workflows.
-  \item Increased test coverage for critical modules, reducing post-release bugs by up to 50\%.
-  \item Optimized CI with selective test execution, saving 5–15 minutes per PR and improving delivery speed.
-  \item Delivered React features/components and performed regular cross-team code reviews.
+  \item Designed and shipped Go backend services integrated with Salesforce and Stripe, including an idempotent webhook reconciliation worker that reduced payment mismatches.
+  \item Improved reliability via fault-tolerant email workflows, increased test coverage, and optimized CI with selective test execution (saving 5\textendash{}15 min/PR).
+  \item Delivered React features and performed regular cross-team code reviews.
 \end{itemize}
 
-\vspace{0.3em}
-\roleentry{Full-stack Engineer \textemdash{} Prior roles}{Various companies}{Remote \& On-site}{2015\textendash{}2022}
+\vspace{0.12em}
+\roleentry{Full Stack Engineer \textemdash{} Prior roles}{Various companies}{Remote \& On-site}{2015\textendash{}2022}
 \begin{itemize}
-  \item Shipped production features across Java, Angular, Node.js, and modern frontend stacks.
-  \item DropCar: migrated monolith toward microservices; integrated Twilio for masked communications.
-  \item City Government (COVID-19 Response): led frontend delivery and supported team execution under tight deadlines.
-  \item Synegen: designed and implemented badge assignment logic (backend + UI) for an e-learning platform.
+  \item Shipped production features across Java, Angular, Node.js, and modern frontend stacks: DropCar (microservices migration, Twilio), Synegen (e-learning badges), and City Government COVID-19 response (frontend delivery lead).
 \end{itemize}
 
 % ---------- Skills ----------
 \section*{Skills}
 \begin{itemize}
   \item Backend: Go, Node.js, REST/GraphQL, Webhooks/Event-driven, Idempotency, Background jobs/workers
-  \item Frontend: React, Next.js, TypeScript
+  \item Frontend: React, Next.js, SvelteKit, TypeScript
   \item Data: PostgreSQL, schema design, migrations
-  \item Infra/DevEx: Docker, CI/CD, testing, observability/logging
-  \item Integrations: Stripe, Salesforce, Clerk, Resend
+  \item Infra/DevEx: Docker, CI/CD, AWS/S3, testing, observability/logging
+  \item Integrations: Stripe, Salesforce, Clerk, Resend, third-party \& legacy systems
+  \item AI-assisted development: coding agents, lightweight specs, validation/code review
 \end{itemize}
+
+% ---------- Certifications ----------
+\section*{Certifications}
+\tworow{Claude Certified Architect \textendash{} Foundations \textemdash{} Anthropic, Aug 2026}{\href{https://www.credly.com/badges/f190e0f0-f216-4c74-8170-70a9c0644fec}{Credly}}
 
 % ---------- Education ----------
 \section*{Education}
