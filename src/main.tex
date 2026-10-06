@@ -3,7 +3,7 @@
 \documentclass[10pt,a4paper]{article}
 
 % Typography & layout
-\usepackage[a4paper,top=0.45in,bottom=0.6in,left=0.5in,right=0.5in]{geometry}
+\usepackage[a4paper,top=0.4in,bottom=0.5in,left=0.5in,right=0.5in,footskip=23pt]{geometry}
 \usepackage{fontspec}
 \usepackage{titlesec}
 \usepackage{titling}
@@ -27,13 +27,18 @@
 
 % Section style — small caps, rule underneath
 \titleformat{\section}{\large\bfseries}{}{0pt}{\MakeUppercase}[
-  \vspace{0.2em}\titlerule]
-\titlespacing*{\section}{0pt}{0.45em}{0.2em}
+  \vspace{0.1em}\titlerule]
+\titlespacing*{\section}{0pt}{0.22em}{0.08em}
 
 % Reduce space between items and paragraphs
-\setlength{\parskip}{0.3em}
+\setlength{\parskip}{0.12em}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=1em,labelsep=0.35em,itemsep=0.08em,topsep=0.08em,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=1em,labelsep=0.35em,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+% Allow a small amount of emergency stretch as a last resort, so an
+% occasional long line can avoid going overfull without affecting
+% normal paragraph spacing elsewhere in the document.
+\setlength{\emergencystretch}{3em}
 
 % Colors
 \definecolor{muted}{gray}{0.3}
@@ -88,19 +93,19 @@
 
 % ---------- About Me ----------
 \section*{About Me}
-Full-stack Engineer (10+ years) in Go, React/Next.js, TypeScript, and PostgreSQL, focused on systems integration, automation, reliable async/event-driven workflows, and AI-assisted development. Built and operated production systems end-to-end: payments, webhooks, onboarding UX, CI, and incident remediation.
+Senior Product / Software Engineer with 10+ years of experience delivering production software across backend, frontend, integrations, and automation. I use AI coding agents extensively across discovery, planning, implementation, testing, and review while retaining ownership of technical decisions, validation, and correctness. Recent work spans Go/TypeScript, PostgreSQL, asynchronous workflows, external and legacy integrations, and correctness-sensitive billing and automation systems.
 
 % ---------- Experience ----------
 \section*{Experience}
 
 \roleentry{Full Stack Engineer}{EPWERY}{Remote}{Jun 2026\textendash{}Present}
 \begin{itemize}
-  \item Building backend (Go) and frontend (TypeScript) for an internal automation product: PostgreSQL schema/migrations, AWS S3-backed artifact storage, and third-party/legacy-system integrations.
-  \item Reverse-engineering external systems (auth flows, data contracts, failure modes) and writing lightweight specs before implementing durable, queue-based async workflows with idempotency and data-integrity checks.
-  \item Defining and applying an AI-assisted engineering workflow \textemdash{} repository discovery, lightweight technical specs, coding agents, focused validation, and diff review \textemdash{} while coordinating with another engineer and partner teams.
+  \item Own integration-heavy engineering work end-to-end, turning incomplete requirements and external-system constraints into scoped technical contracts and working solutions across Go, TypeScript, PostgreSQL, and third-party/legacy systems.
+  \item Led design and delivery of correctness-sensitive billing components, including direct ARCA integration and reconciliation, versioned ARBA/APR data pipelines, recoverable refresh workflows, and a provider-neutral fiscal layer with exact arithmetic, provenance, and fail-closed behavior.
+  \item Apply an AI-native engineering workflow spanning repository and context discovery, lightweight technical specs, coding agents, focused testing, independent review, and targeted remediation while remaining responsible for architecture, integration decisions, and validation.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.08em}
 \roleentry{Product Engineer}{ELYS Health}{Remote}{Jan 2026}
 \begin{itemize}
   \item Built a Stripe subscription \& payment flow (Checkout + Webhooks); refactored onboarding from modal state to a Next.js route-based flow for reliable Back/Forward support.
@@ -108,7 +113,7 @@ Full-stack Engineer (10+ years) in Go, React/Next.js, TypeScript, and PostgreSQL
   \item Implemented an automated waitlist + invite system with Resend, using atomic processing patterns for reliable lead handling.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.08em}
 \roleentry{Full Stack Engineer}{Epwery - Ansel Health}{Remote}{Jul 2022\textendash{}Oct 2025}
 \begin{itemize}
   \item Designed and shipped Go backend services integrated with Salesforce and Stripe, including an idempotent webhook reconciliation worker that reduced payment mismatches.
@@ -116,7 +121,7 @@ Full-stack Engineer (10+ years) in Go, React/Next.js, TypeScript, and PostgreSQL
   \item Delivered React features and performed regular cross-team code reviews.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.08em}
 \roleentry{Full Stack Engineer \textemdash{} Prior roles}{Various companies}{Remote \& On-site}{2015\textendash{}2022}
 \begin{itemize}
   \item Shipped production features across Java, Angular, Node.js, and modern frontend stacks: DropCar (microservices migration, Twilio), Synegen (e-learning badges), and City Government COVID-19 response (frontend delivery lead).
